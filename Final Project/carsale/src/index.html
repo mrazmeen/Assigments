@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Carsale</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <script type="text/javascript">
+    var clientFiles = ["assets/images/favicon.ico",
+      "assets/css/bootstrap.min.css",
+      "assets/css/flaticon.css",
+      "assets/css/mega-menu/mega_menu.css",
+      "assets/css/font-awesome.min.css",
+      "assets/css/slick/slick.css",
+      "assets/css/slick/slick-theme.css",
+      "assets/css/owl-carousel/owl.carousel.css",
+      "assets/revolution/css/settings.css",
+      "assets/css/style.css",
+      "assets/css/responsive.css",
+      "assets/css/style-customizer.css"
+    ];
+
+    if (window.location.href.indexOf("admin") == -1) {
+      for (var i = 0; i < clientFiles.length; i++) {
+        document.write('<link href="' + clientFiles[i] + '" rel="stylesheet">');
+      }
+    }
+
+    var adminFiles = ["assets/admin/css/app.min.css",
+      "assets/admin/css/style.css",
+      "assets/admin/css/components.css",
+      "assets/admin/css/custom.css"
+    ];
+    if (window.location.href.indexOf("admin") > -1) {
+      document.write('<link href="assets/admin/img/favicon.ico" rel="shortcut icon" type="image/x-icon">');
+      for (var i = 0; i < adminFiles.length; i++) {
+        document.write('<link href="' + adminFiles[i] + '" rel="stylesheet">');
+      }
+    }
+  </script>
+
+</head>
+<!-- Google Tag Manager -->
+<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+<!--    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+<!--  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+<!--  '../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+<!--})(window,document,'script','dataLayer','GTM-557RCPW');</script>-->
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+  if (window.location.href.indexOf("admin") == -1) {
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '../../../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-557RCPW');
+
+  }
+</script>
+<body>
+<!-- Google Tag Manager (noscript)-->
+<!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-557RCPW"-->
+<!--                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
+<!-- End Google Tag Manager (noscript)-->
+
+<!--=================================
+  loading -->
+
+<!--<div id="loading">-->
+<!--  <div id="loading-center">-->
+<!--    <img src="assets/images/loader4.gif" alt="">-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<app-root></app-root>
+
+<!--<div class="car-top">-->
+<!--  <span><img src="assets/images/car.png" alt=""></span>-->
+<!--</div>-->
+
+
+<script type="text/javascript">
+  var clientFiles = ["assets/js/jquery-3.3.1.min.js",
+    "assets/js/popper.js",
+    "assets/js/bootstrap.min.js",
+    "assets/js/mega-menu/mega_menu.js",
+    "assets/js/jquery.appear.js",
+    "assets/js/counter/jquery.countTo.js",
+    "assets/js/owl-carousel/owl.carousel.min.js",
+    "assets/js/select/jquery-select.js",
+    "assets/js/slick/slick.min.js",
+    "assets/js/magnific-popup/jquery.magnific-popup.min.js",
+    "assets/revolution/js/jquery.themepunch.tools.min.js",
+    "assets/revolution/js/jquery.themepunch.revolution.min.js",
+    "assets/revolution/js/extensions/revolution.extension.actions.min.js",
+    "assets/revolution/js/extensions/revolution.extension.carousel.min.js",
+    "assets/revolution/js/extensions/revolution.extension.kenburn.min.js",
+    "assets/revolution/js/extensions/revolution.extension.layeranimation.min.js",
+    "assets/revolution/js/extensions/revolution.extension.migration.min.js",
+    "assets/revolution/js/extensions/revolution.extension.navigation.min.js",
+    "assets/revolution/js/extensions/revolution.extension.parallax.min.js",
+    "assets/revolution/js/extensions/revolution.extension.slideanims.min.js",
+    "assets/revolution/js/extensions/revolution.extension.video.min.js",
+    "assets/js/custom.js",
+    "assets/js/style-customizer.js"
+  ];
+
+  if (window.location.href.indexOf("admin") == -1) {
+    for (var i = 0; i < clientFiles.length; i++) {
+      document.write('<script src="' + clientFiles[i] + '"><\/script>');
+    }
+  }
+  var adminFiles=["assets/admin/js/app.min.js",
+    "assets/admin/bundles/apexcharts/apexcharts.min.js",
+    "assets/admin/js/page/index.js",
+    "assets/admin/js/scripts.js",
+    "assets/admin/js/custom.js"
+
+  ];
+  if (window.location.href.indexOf("admin") > -1) {
+    for (var i = 0; i < adminFiles.length; i++) {
+      document.write('<script src="' + adminFiles[i] + '"><\/script>');
+    }
+  }
+</script>
+<script type="text/javascript">
+  if (window.location.href.indexOf("admin") == -1) {
+    (function ($) {
+      "use strict";
+
+      var tpj = jQuery;
+      var revapi10;
+      tpj(document).ready(function () {
+        if (tpj("#rev_slider_10_1").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider_10_1");
+        } else {
+          revapi10 = tpj("#rev_slider_10_1").show().revolution({
+            sliderType: "standard",
+            sliderLayout: "fullwidth",
+            dottedOverlay: "none",
+            delay: 9000,
+            navigation: {
+              keyboardNavigation: "off",
+              keyboard_direction: "horizontal",
+              mouseScrollNavigation: "off",
+              mouseScrollReverse: "default",
+              onHoverStop: "off",
+              arrows: {
+                style: "hesperiden",
+                enable: true,
+                hide_onmobile: false,
+                hide_onleave: false,
+                tmp: '',
+                left: {
+                  h_align: "left",
+                  v_align: "center",
+                  h_offset: 20,
+                  v_offset: 0
+                },
+                right: {
+                  h_align: "right",
+                  v_align: "center",
+                  h_offset: 20,
+                  v_offset: 0
+                }
+              }
+            },
+            visibilityLevels: [1240, 1024, 778, 480],
+            gridwidth: 1920,
+            gridheight: 900,
+            lazyType: "none",
+            parallax: {
+              type: "mouse",
+              origo: "enterpoint",
+              speed: 400,
+              levels: [3, 5, 8, 10, 12, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
+              type: "mouse",
+            },
+            shadow: 0,
+            spinner: "spinner3",
+            stopLoop: "off",
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            disableProgressBar: "on",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+              simplifyAll: "off",
+              nextSlideOnWindowFocus: "off",
+              disableFocusListener: false,
+            }
+          });
+        }
+      });
+    })(jQuery);
+  }
+</script>
+</body>
+</html>

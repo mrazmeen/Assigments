@@ -1,0 +1,221 @@
+<div class="loader"></div>
+<div id="app">
+  <div class="main-wrapper main-wrapper-1">
+    <app-nav-top></app-nav-top>
+    <app-leftside-panal></app-leftside-panal>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <section class="section">
+        <div class="section-body">
+          <div class="row">
+            <div class="col-12 ">
+              <div class="card">
+                <form name="form" #carForm="ngForm" (ngSubmit)="addCar()">
+                <div class="card-header">
+                  <h4>Car Registration</h4>
+                </div>
+                <div class="row ">
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <div class="form-group">
+                        <label>Type</label>
+                        <select class="form-control" name="type" [(ngModel)]="carModel.type">
+                          <option [value]="carType"
+                                  *ngFor="let carType of carTypes"> {{carType}} </option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Make</label>
+                        <select class="form-control" name="make" [(ngModel)]="carModel.make">
+                          <option  [value]="carBrandName"
+                                  *ngFor="let carBrandName of carBrandNames"> {{carBrandName}} </option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Condition</label>
+                        <select class="form-control"  name="condition" [(ngModel)]="carModel.condition">
+                          <option  [value]="carCondition"
+                                  *ngFor="let carCondition of carConditions"> {{carCondition}} </option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Model</label>
+                        <input type="text" class="form-control" name="model" [(ngModel)]="carModel.modelName">
+                      </div>
+                      <div class="form-group">
+                        <label>Exterior Color</label>
+                        <input type="text" class="form-control" name="exterior_color" [(ngModel)]="carModel.exteriorColor">
+                      </div>
+                      <div class="form-group">
+                        <label>Interior Color</label>
+                        <input type="text" class="form-control" name="interior_color" [(ngModel)]="carModel.interiorColor">
+                      </div>
+                      <div class="form-group">
+                        <label>Interior Material</label>
+                        <input type="text" class="form-control" name="interior_material" [(ngModel)]="carModel.interiorMaterial">
+                      </div>
+                      <div class="form-group">
+                        <label>Mileage</label>
+                        <input type="text" class="form-control" name="mileage" [(ngModel)]="carModel.mileage">
+                      </div>
+                      <div class="form-group">
+                        <label>General Information</label>
+                        <textarea class="form-control" name="general_information" [(ngModel)]="carModel.generalInformation"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label>Overview</label>
+                        <textarea class="form-control" name="overview" [(ngModel)]="carModel.overview"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="card-body">
+
+                      <div class="form-group">
+                        <label>Seating Capacity</label>
+                        <input type="text" class="form-control" name="SeatingCapacity" [(ngModel)]="carModel.SeatingCapacity">
+                      </div>
+                      <div class="form-group">
+                        <label>Break Type</label>
+                        <input type="text" class="form-control" name="brakeType" [(ngModel)]="carModel.brakeType">
+                      </div>
+                      <div class="form-group">
+                        <label>Displacement</label>
+                        <input type="text" class="form-control" name="displacement" [(ngModel)]="carModel.displacement">
+                      </div>
+                      <div class="form-group">
+                        <label>Drivetrain</label>
+                        <input type="text" class="form-control" name="drivetrain" [(ngModel)]="carModel.drivetrain">
+                      </div>
+                      <div class="form-group">
+                        <label>Horse Power</label>
+                        <input type="text" class="form-control" name="horsepower" [(ngModel)]="carModel.horsepower">
+                      </div>
+                      <div class="form-group">
+                        <label>Engine Type</label>
+                        <input type="text" class="form-control" name="engineType" [(ngModel)]="carModel.engineType">
+                      </div>
+                      <div class="form-group">
+                        <label>Torque</label>
+                        <input type="text" class="form-control" name="torque" [(ngModel)]="carModel.torque">
+                      </div>
+                      <div class="form-group">
+                        <label>Transmission</label>
+                        <input type="text" class="form-control" name="transmission" [(ngModel)]="carModel.transmission">
+                      </div>
+                      <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control" name="price" [(ngModel)]="carModel.price">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer text-right">
+                  <button class="btn btn-primary mr-1" type="submit">Submit</button>
+                  <button class="btn btn-secondary" type="reset">Reset</button>
+                </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <div class="settingSidebar">
+        <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+        </a>
+        <div class="settingSidebar-body ps-container ps-theme-default">
+          <div class=" fade show active">
+            <div class="setting-panel-header">Setting Panel
+            </div>
+            <div class="p-15 border-bottom">
+              <h6 class="font-medium m-b-10">Select Layout</h6>
+              <div class="selectgroup layout-color w-50">
+                <label class="selectgroup-item">
+                  <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
+                  <span class="selectgroup-button">Light</span>
+                </label>
+                <label class="selectgroup-item">
+                  <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
+                  <span class="selectgroup-button">Dark</span>
+                </label>
+              </div>
+            </div>
+            <div class="p-15 border-bottom">
+              <h6 class="font-medium m-b-10">Sidebar Color</h6>
+              <div class="selectgroup selectgroup-pills sidebar-color">
+                <label class="selectgroup-item">
+                  <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                  <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                        data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                </label>
+                <label class="selectgroup-item">
+                  <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                  <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                        data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                </label>
+              </div>
+            </div>
+            <div class="p-15 border-bottom">
+              <h6 class="font-medium m-b-10">Color Theme</h6>
+              <div class="theme-setting-options">
+                <ul class="choose-theme list-unstyled mb-0">
+                  <li title="white" class="active">
+                    <div class="white"></div>
+                  </li>
+                  <li title="cyan">
+                    <div class="cyan"></div>
+                  </li>
+                  <li title="black">
+                    <div class="black"></div>
+                  </li>
+                  <li title="purple">
+                    <div class="purple"></div>
+                  </li>
+                  <li title="orange">
+                    <div class="orange"></div>
+                  </li>
+                  <li title="green">
+                    <div class="green"></div>
+                  </li>
+                  <li title="red">
+                    <div class="red"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-15 border-bottom">
+              <div class="theme-setting-options">
+                <label class="m-b-0">
+                  <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                         id="mini_sidebar_setting">
+                  <span class="custom-switch-indicator"></span>
+                  <span class="control-label p-l-10">Mini Sidebar</span>
+                </label>
+              </div>
+            </div>
+            <div class="p-15 border-bottom">
+              <div class="theme-setting-options">
+                <label class="m-b-0">
+                  <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                         id="sticky_header_setting">
+                  <span class="custom-switch-indicator"></span>
+                  <span class="control-label p-l-10">Sticky Header</span>
+                </label>
+              </div>
+            </div>
+            <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+              <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                <i class="fas fa-undo"></i> Restore Default
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-admin-footer></app-admin-footer>
+  </div>
+</div>
